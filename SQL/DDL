@@ -1,0 +1,25 @@
+-- MySQL 8.0
+-- Create User
+CREATE USER 'practice'@'localhost'
+  IDENTIFIED BY 'practice';
+GRANT ALL
+  ON *.*
+  TO 'practice'@'localhost' 
+  WITH GRANT OPTION;
+  
+-- Create database
+CREATE DATABASE travel;
+
+-- Select database
+use travel;
+
+-- Create passenger table
+CREATE TABLE passenger ( 
+       id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	   first_name VARCHAR(20), 
+	   last_name VARCHAR(20),
+       email VARCHAR(20), 
+	   sex CHAR(1), 
+	   birthDate DATE,
+	   PRIMARY KEY (id)
+	   );
